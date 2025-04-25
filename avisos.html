@@ -1,0 +1,112 @@
+<!-- Avisos -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avisos - Mi Página Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans bg-white text-black">
+    <main>
+      <!-- Header -->
+      <nav class="bg-green-400 border-8 border-black">
+        <div
+          class="container mx-auto p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="flex items-center space-x-4">
+            <!-- Titulo de la pagina -->
+            <div class="flex items-center space-x-4">
+              <span class="text-3xl font-extrabold">Mi Página Web</span>
+              <span class="text-pink-500 text-3xl">⋮</span>
+              <span
+                class="text-3xl text-pink-500 font-extrabold hidden sm:inline"
+                >Avisos</span
+              >
+            </div>
+            <!-- Botón hamburguesa (solo mobile) -->
+            <div class="sm:hidden">
+              <button id="menu-btn" class="text-3xl font-bold">☰</button>
+            </div>
+          </div>
+
+          <!-- Navbar -->
+          <div
+            id="menu"
+            class="hidden flex flex-col items-center mt-6 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-end sm:space-x-8 sm:space-y-0 sm:mt-0"
+          >
+            <!-- Script para ocultar el menu hamburguesa en mobile -->
+            <script>
+              const btn = document.getElementById("menu-btn");
+              const menu = document.getElementById("menu");
+              btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+              });
+            </script>
+
+            <a href="index.html" class="text-2xl hover:underline">Inicio</a>
+            <a href="avisos.html" class="text-2xl hover:underline">Avisos</a>
+            <a href="sobremi.html" class="text-2xl hover:underline">Sobre mí</a>
+            <a href="materias2025.html" class="text-2xl hover:underline"
+              >Materias 2025</a
+            >
+            <a href="contacto.html" class="text-2xl hover:underline"
+              >Contacto</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main -->
+      <div class="container mx-auto px-6 py-10">
+        <article class="border-4 border-black p-8 bg-green-100">
+          <h1 class="text-5xl font-extrabold mb-8 text-pink-500">Avisos</h1>
+          <section class="space-y-8">
+            <div
+              class="border-8 border-black p-6 bg-green-300 hover:bg-pink-200 transition"
+            >
+              <h2 class="text-3xl font-bold mb-2">
+                Arquitectura de Computadores
+              </h2>
+              <p class="text-2xl">21 de abril: Parcial número 1.</p>
+            </div>
+            <div
+              class="border-8 border-black p-6 bg-green-300 hover:bg-pink-200 transition"
+            >
+              <h2 class="text-3xl font-bold mb-2">Sistemas de Información I</h2>
+              <p class="text-2xl">22 de abril: Entrega TP integrador.</p>
+              <p class="text-2xl">29 de abril: Parcial número 1.</p>
+            </div>
+            <div
+              class="border-8 border-black p-6 bg-green-300 hover:bg-pink-200 transition"
+            >
+              <h2 class="text-3xl font-bold mb-2">
+                Fundamentos de Informática
+              </h2>
+              <p class="text-2xl">23 de abril: Parcial número 1.</p>
+            </div>
+            <div
+              class="border-8 border-black p-6 bg-green-300 hover:bg-pink-200 transition"
+            >
+              <h2 class="text-3xl font-bold mb-2">Marketing</h2>
+              <p class="text-2xl">24 de abril: Parcial número 1.</p>
+            </div>
+            <div
+              class="border-8 border-black p-6 bg-green-300 hover:bg-pink-200 transition"
+            >
+              <h2 class="text-3xl font-bold mb-2">Diseño y Desarrollo Web</h2>
+              <p class="text-2xl">26 de abril: Entrega TP parcial 1.</p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer
+      class="bg-gray-900 text-gray-300 text-center p-4 border-t-4 border-black"
+    >
+      <p class="text-xl">&copy; 2025 Tomas Gonzalo Coria</p>
+    </footer>
+  </body>
+</html>

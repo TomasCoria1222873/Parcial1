@@ -1,0 +1,74 @@
+<!-- DISEÑO Y DESARROLLO WEB UVA -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño y Desarrollo Web - Mi Página Web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white text-black min-h-screen flex flex-col">
+  <main class="flex-grow">
+    <!-- Navbar -->
+    <nav class="bg-green-400 border-8 border-black">
+      <div class="container mx-auto p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-4">
+            <span class="text-3xl font-extrabold">Mi Página Web</span>
+            <span class="text-pink-500 text-3xl">⋮</span>
+            <span class="text-3xl text-pink-500 font-extrabold hidden sm:inline">Diseño y Desarrollo Web</span>
+          </div>
+          <div class="sm:hidden">
+            <button id="menu-btn" class="text-3xl font-bold">☰</button>
+          </div>
+        </div>
+        <div id="menu" class="hidden flex flex-col items-center mt-6 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-end sm:space-x-8 sm:space-y-0 sm:mt-0">
+          <script>
+            const btn = document.getElementById("menu-btn");
+            const menu = document.getElementById("menu");
+            btn.addEventListener("click", () => {
+              menu.classList.toggle("hidden");
+            });
+          </script>
+          <a href="index.html" class="text-2xl hover:underline">Inicio</a>
+          <a href="avisos.html" class="text-2xl hover:underline">Avisos</a>
+          <a href="sobremi.html" class="text-2xl hover:underline">Sobre mí</a>
+          <a href="materias2025.html" class="text-2xl hover:underline">Materias 2025</a>
+          <a href="contacto.html" class="text-2xl hover:underline">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mx-auto px-6 py-10">
+      <article class="border-4 border-black p-8 bg-green-100">
+        <h1 class="text-5xl font-extrabold mb-8 text-pink-500">Diseño y Desarrollo Web</h1>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="bg-green-300 border-4 border-black p-6 text-2xl font-semibold h-48">
+    Fechas de exámenes
+    <ul class="list-disc pl-6 text-xl font-normal mt-2">
+      <li>25/04 - Primer Parcial</li>
+      <li>13/06 - Segundo Parcial</li>
+      <li>18/07 - Examen Final</li>
+    </ul>
+  </div>
+  <div class="bg-green-300 border-4 border-black p-6 text-2xl font-semibold md:row-span-2 md:col-span-2 h-full">Actividades UVAs</div>
+  <div class="bg-green-300 border-4 border-black p-6 text-2xl font-semibold h-48">
+    Bibliografía
+    <p class="text-xl font-normal mt-2">
+      NIEDERST ROBBINS, Jennifer. <em>HTML5 Pocket Reference Quick, Comprehensive, Indispensable</em> (Pocket Reference, O'Reilly). 5ta. Ed.
+    </p>
+  </div>
+</section>
+        <div class="mt-8 text-xl text-center">
+          Curso: 15130 / Profesora: Patricia Litovicius
+        </div>
+      </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-center p-4 border-t-4 border-black">
+    <p class="text-xl">&copy; 2025 Tomas Gonzalo Coria</p>
+  </footer>
+</body>
+</html>

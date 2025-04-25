@@ -1,0 +1,112 @@
+<!-- CONTACTO.html -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Mi Página Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans bg-white text-black">
+    <main>
+      <!-- Barra de navegación -->
+      <nav class="bg-green-400 border-8 border-black">
+        <div
+          class="container mx-auto p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="flex items-center space-x-4">
+            <!-- Título y nombre de la página -->
+            <div class="flex items-center space-x-4">
+              <span class="text-3xl font-extrabold">Mi Página Web</span>
+              <span class="text-pink-500 text-3xl">⋮</span>
+              <span
+                class="text-3xl text-pink-500 font-extrabold hidden sm:inline"
+                >Contacto</span
+              >
+            </div>
+            <!-- Botón hamburguesa para mobile -->
+            <div class="sm:hidden">
+              <button id="menu-btn" class="text-3xl font-bold">☰</button>
+            </div>
+          </div>
+          <!-- Menú de navegación -->
+          <div
+            id="menu"
+            class="hidden flex flex-col items-center mt-6 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-end sm:space-x-8 sm:space-y-0 sm:mt-0"
+          >
+            <!-- Script para alternar visibilidad del menú -->
+            <script>
+              const btn = document.getElementById("menu-btn");
+              const menu = document.getElementById("menu");
+              btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+              });
+            </script>
+            <a href="index.html" class="text-2xl hover:underline">Inicio</a>
+            <a href="avisos.html" class="text-2xl hover:underline">Avisos</a>
+            <a href="sobremi.html" class="text-2xl hover:underline">Sobre mí</a>
+            <a href="materias2025.html" class="text-2xl hover:underline"
+              >Materias 2025</a
+            >
+            <a href="contacto.html" class="text-2xl hover:underline"
+              >Contacto</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Contenido principal -->
+      <div class="container mx-auto px-6 py-10">
+        <article class="border-4 border-black p-8 bg-green-100">
+          <h1 class="text-5xl font-extrabold mb-8 text-pink-500">Contacto</h1>
+          <section class="text-3xl space-y-8">
+            <form class="space-y-6">
+              <div>
+                <label class="block font-bold mb-2" for="nombre">Nombre:</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="w-full p-4 border-4 border-black bg-white"
+                />
+              </div>
+              <div>
+                <label class="block font-bold mb-2" for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full p-4 border-4 border-black bg-white"
+                />
+              </div>
+              <div>
+                <label class="block font-bold mb-2" for="mensaje"
+                  >Mensaje:</label
+                >
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  class="w-full p-4 border-4 border-black bg-white"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-pink-500 hover:bg-pink-400 border-4 border-black px-6 py-4 text-black text-2xl font-bold"
+              >
+                Enviar
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer
+      class="bg-gray-900 text-gray-300 text-center p-4 border-t-4 border-black"
+    >
+      <p class="text-xl">&copy; 2025 Tomas Gonzalo Coria</p>
+    </footer>
+  </body>
+</html>
