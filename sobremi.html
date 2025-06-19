@@ -6,97 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mí - Mi Página Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Estilos modo oscuro -->
+    <style>
+      .dark-mode { background-color: #000 !important; color: #fff !important; }
+      .dark-mode nav { background-color: #2e2e2e !important; }
+      .dark-mode nav span, .dark-mode nav a, .dark-mode nav button { color: #fff !important; }
+      .dark-mode article { background-color: #000 !important; }
+      .dark-mode .bg-green-100 { background-color: #111 !important; }
+      .dark-mode .dark-bg-secondary { background-color: #222 !important; }
+      .dark-mode footer { background-color: #232323 !important; color: #fff !important; }
+      .dark-mode button { background-color: #ff00ff !important; color: #000 !important; }
+      .dark-mode a { color: #facc15 !important; }
+      .dark-mode .hover\:bg-pink-200:hover { background-color: #ff00ff !important; }
+    </style>
   </head>
-  <body class="font-sans bg-white text-black min-h-screen flex flex-col">
+  <body id="body" class="min-h-screen flex flex-col font-sans bg-white text-black">
     <main class="flex-grow">
       <!-- Header -->
       <nav class="bg-green-400 border-8 border-black">
-        <div
-          class="container mx-auto p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between"
-        >
+        <div class="container mx-auto p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div class="flex items-center space-x-4">
             <!-- Título de la página -->
-            <div class="flex items-center space-x-4">
-              <span class="text-3xl font-extrabold">Mi Página Web</span>
-              <span class="text-pink-500 text-3xl">⋮</span>
-              <span
-                class="text-3xl text-pink-500 font-extrabold hidden sm:inline"
-                >Sobre mí</span
-              >
-            </div>
-            <!-- Botón hamburguesa (solo mobile) -->
-            <div class="sm:hidden">
-              <button id="menu-btn" class="text-3xl font-bold">☰</button>
-            </div>
+            <span class="text-3xl font-extrabold">Mi Página Web</span>
+            <span class="text-pink-500 text-3xl">⋮</span>
+            <span class="text-3xl text-pink-500 font-extrabold hidden sm:inline">Sobre mí</span>
           </div>
-
+          <!-- Botón hamburguesa (solo mobile) -->
+          <div class="sm:hidden">
+            <button id="menu-btn" class="text-3xl font-bold">☰</button>
+          </div>
           <!-- Navbar -->
-          <div
-            id="menu"
-            class="hidden flex flex-col items-center mt-6 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-end sm:space-x-8 sm:space-y-0 sm:mt-0"
-          >
-            <!-- Script para alternar el menú -->
+          <div id="menu" class="hidden flex flex-col items-center mt-6 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-end sm:space-x-8 sm:mt-0">
             <script>
-              const btn = document.getElementById("menu-btn");
-              const menu = document.getElementById("menu");
-              btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-              });
+              const btn = document.getElementById('menu-btn');
+              const menu = document.getElementById('menu');
+              btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
             </script>
             <a href="index.html" class="text-2xl hover:underline">Inicio</a>
             <a href="avisos.html" class="text-2xl hover:underline">Avisos</a>
             <a href="sobremi.html" class="text-2xl hover:underline">Sobre mí</a>
-            <a href="materias2025.html" class="text-2xl hover:underline"
-              >Materias 2025</a
-            >
-            <a href="contacto.html" class="text-2xl hover:underline"
-              >Contacto</a
-            >
+            <a href="materias2025.html" class="text-2xl hover:underline">Materias 2025</a>
+            <a href="contacto.html" class="text-2xl hover:underline">Contacto</a>
           </div>
         </div>
       </nav>
+      <!-- Botón tema fijo -->
+      <button onclick="toggleTheme()" class="fixed bottom-4 right-4 z-50 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-600">Tema</button>
 
-      <!-- Main -->
+      <!-- Contenido principal -->
       <div class="container mx-auto px-6 py-10">
-        <article class="border-4 border-black p-8 bg-green-100">
+        <article class="border-4 border-black p-8 bg-green-100 dark-bg-secondary">
           <h1 class="text-5xl font-extrabold mb-8 text-pink-500">Sobre mí</h1>
-          <section
-            class="flex flex-col sm:flex-row items-center sm:items-start gap-8"
-          >
+          <section class="flex flex-col sm:flex-row items-center sm:items-start gap-8">
             <!-- Foto de perfil -->
             <div class="w-full sm:w-3/5">
-              <img
-                src="src/img/1.jpg"
-                alt="Foto de Tomas Gonzalo Coria"
-                class="border-4 border-black w-full"
-              />
+              <img src="src/img/1.jpg" alt="Foto de Tomas Gonzalo Coria" class="border-4 border-black w-full">
             </div>
-
             <!-- Información personal -->
             <div class="text-3xl space-y-6 w-full sm:w-2/5">
               <p>Mi nombre es <strong>Tomas Gonzalo Coria</strong>.</p>
-              <p>
-                Estudio
-                <strong
-                  >Licenciatura en Gestión de Tecnologías de la
-                  Información</strong
-                >.
-              </p>
-              <p>
-                Mis gustos incluyen:
-                <strong>videojuegos, tocar la guitarra y cocinar</strong>.
-              </p>
+              <p>Estudio <strong>Licenciatura en Gestión de Tecnologías de la Información</strong>.</p>
+              <p>Mis gustos incluyen: <strong>videojuegos, tocar la guitarra y cocinar</strong>.</p>
             </div>
           </section>
         </article>
       </div>
     </main>
-
     <!-- Pie de página -->
-    <footer
-      class="bg-gray-900 text-gray-300 text-center p-4 border-t-4 border-black"
-    >
+    <footer class="bg-gray-900 text-gray-300 text-center p-4 border-t-4 border-black">
       <p class="text-xl">&copy; 2025 Tomas Gonzalo Coria</p>
     </footer>
+    <!-- Script modo oscuro -->
+    <script>
+      function toggleTheme() { document.getElementById('body').classList.toggle('dark-mode'); }
+    </script>
   </body>
 </html>
